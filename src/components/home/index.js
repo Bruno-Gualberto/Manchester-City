@@ -1,11 +1,11 @@
 import React from 'react';
 
-function App() {
+const Home = () => {
   return (
     <>
-      hello
+      Home
     </>
-  );
+  )
 }
 
-export default App;
+export default Home;

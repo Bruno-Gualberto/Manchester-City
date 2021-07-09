@@ -729,3 +729,7 @@ footer .footer_discl {
     justify-content: center;
     align-items: center;
 }
+
+.signin_wrapper .progress {
+  margin-top: 10px;
+}

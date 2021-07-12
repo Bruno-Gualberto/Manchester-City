@@ -6,7 +6,7 @@ import Footer from './components/header_footer/Footer';
 import Home from './components/home/index.js';
 import SignIn from './components/sign_in';
 
-const Routes = () =>  {
+const Routes = (props) =>  {
   return (
     <BrowserRouter>
 

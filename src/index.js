@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './routes';
+import { firebase } from './firebase';
 import './Resources/css/app.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = (props) => (
+  <Routes {...props}/>
+)
+firebase.auth().onAuthStateChanged(user => {
+  ReactDOM.render(<App user={user} />,document.getElementById('root'));
+})

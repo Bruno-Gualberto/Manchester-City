@@ -5,14 +5,15 @@ import { CircularProgress } from '@material-ui/core';
 import { Redirect } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { showSuccessToast, showErrorToast } from '../utils/tools.js'
 
 const SignIn = (props) => {
   const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
     initialValues: {
-      email: '',
-      password: ''
+      email: 'gualba.bruno@gmail.com',
+      password: '123test4'
     },
     validationSchema: Yup.object({
       email: Yup.string()
@@ -33,12 +34,11 @@ const SignIn = (props) => {
       values.email,
       values.password
     ).then(() => {
-      // show success toast
+      showSuccessToast('You are logged in!')
       props.history.push('/dashboard')
     }).catch(error => {
       setLoading(false);
-      alert(error);
-      // show toasts
+      showErrorToast(error.message)
     })
   }
 

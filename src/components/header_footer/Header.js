@@ -2,19 +2,9 @@ import React from 'react';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { CityLogo } from '../utils/tools';
-import { firebase } from '../../firebase';
-import { showSuccessToast, showErrorToast } from '../utils/tools';
+import { logoutHandler } from '../utils/tools';
 
 const Header = ({user}) => {
-
-  const logoutHandler = () => {
-    firebase.auth().signOut()
-    .then(() => {
-      showSuccessToast('You are logged out!')
-    }).catch(error => {
-      showErrorToast(error.message)
-    })
-  }
 
   return (
     <AppBar

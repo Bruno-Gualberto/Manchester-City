@@ -7,6 +7,7 @@ import './Resources/css/app.css';
 const App = (props) => (
   <Routes {...props}/>
 )
+
 firebase.auth().onAuthStateChanged(user => {
   ReactDOM.render(<App user={user} />,document.getElementById('root'));
 })

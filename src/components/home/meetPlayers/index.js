@@ -27,7 +27,7 @@ const MeetPlayers = () => {
 
   return (
     <Fade 
-      triggerOnce
+      triggerOnce 
       onVisibilityChange={inView => {
         if (inView) { setShow(true) }
       }}

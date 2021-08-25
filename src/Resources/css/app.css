@@ -36,6 +36,14 @@ a {
     margin-bottom: 5px;
 }
 
+.td_button {
+    width: 160px;
+}
+
+.td_button button {
+    margin-top: 0;
+}
+
 .promotion_wrapper input,
 .signin_wrapper input {
     background: #fafafa;

@@ -9,6 +9,7 @@ const AdminLayout = (props) => {
       </div>
 
       <div className="admin_right">
+        <h2>{props.title}</h2>
         {props.children}
       </div>
     </div>

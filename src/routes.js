@@ -11,6 +11,7 @@ import AuthGuard from './hoc/Auth';
 
 import Dashboard from './components/admin/Dashboard';
 import AdminPlayers from './components/admin/players';
+import AddEditPlayers from './components/admin/players/AddEditPlayers';
 
 const Routes = ({user}) =>  {
   return (
@@ -19,6 +20,8 @@ const Routes = ({user}) =>  {
       <Header user={user}/>
 
       <Switch>
+        <Route path="/admin_players/edit_player/:playerid" exact component={AuthGuard(AddEditPlayers)}/>
+        <Route path="/admin_players/add_player" exact component={AuthGuard(AddEditPlayers)}/>
         <Route path="/admin_players" exact component={AuthGuard(AdminPlayers)}/>
         <Route path="/dashboard" exact component={AuthGuard(Dashboard)}/>
         <Route path="/sign_in" exact component={props => (<SignIn {...props} user={user}/>)}/>

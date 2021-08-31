@@ -42,6 +42,7 @@ a {
 
 .td_button button {
     margin-top: 0;
+    cursor: pointer;
 }
 
 .promotion_wrapper input,

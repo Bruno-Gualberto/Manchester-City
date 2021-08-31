@@ -104,11 +104,11 @@ const AdminPlayers = () => {
                     {player.position}
                   </TableCell>
                   <TableCell className="td_button">
-                    <button>
-                      <Link to={`/admin_players/edit_player/${player.id}`}>
+                    <Link to={`/admin_players/edit_player/${player.id}`}>
+                      <button>
                         Edit player
-                      </Link>
-                    </button>
+                      </button>
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))

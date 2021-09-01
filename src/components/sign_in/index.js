@@ -84,7 +84,10 @@ const SignIn = (props) => {
                   className="progress"
                 />
               :
-                <button type="submit">Log in</button>
+                <button 
+                  type="submit"
+                  style={{ cursor: 'pointer'}}  
+                >Sign in</button>
               }
             </form>
           </div>

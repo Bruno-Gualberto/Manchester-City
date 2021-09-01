@@ -129,7 +129,7 @@ button {
 
 .image_upload_container {
     position: relative;
-    width: 240px;
+    width: 200px;
 }
 
 .image_upload_container .remove {
@@ -666,6 +666,25 @@ footer .footer_discl {
     min-width: 164px;
 }
 
+.name_wrapper, .num_select_wrapper {
+    max-width: 50%;
+    display: flex;
+}
+
+.name_wrapper .mb-5:nth-child(2),
+.num_select_wrapper .mb-5:nth-child(2) {
+    margin-left: 5px;
+}
+
+.name_wrapper .mb-5,
+.num_select_wrapper .mb-5 {
+    width: 100%;
+}
+
+.name_wrapper .MuiFormControl-root,
+.num_select_wrapper .MuiFormControl-root {
+    width: 100%;
+}
 
 /*=============================
          THE TEAM

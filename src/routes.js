@@ -13,6 +13,8 @@ import Team from './components/team';
 import Dashboard from './components/admin/Dashboard';
 import AdminPlayers from './components/admin/players';
 import AddEditPlayers from './components/admin/players/AddEditPlayers';
+import AdminMatches from './components/admin/matches/index';
+import AddEditMatch from './components/admin/matches/AddEditMatch';
 
 const Routes = ({user}) =>  {
   return (
@@ -21,9 +23,14 @@ const Routes = ({user}) =>  {
       <Header user={user}/>
 
       <Switch>
+        <Route path="/admin_matches/edit_match/:matchid" exact component={AuthGuard(AddEditMatch)}/>
+        <Route path="/admin_matches/add_match" exact component={AuthGuard(AddEditMatch)}/>
+        <Route path="/admin_matches" exact component={AuthGuard(AdminMatches)}/>
+        
         <Route path="/admin_players/edit_player/:playerid" exact component={AuthGuard(AddEditPlayers)}/>
         <Route path="/admin_players/add_player" exact component={AuthGuard(AddEditPlayers)}/>
         <Route path="/admin_players" exact component={AuthGuard(AdminPlayers)}/>
+        
         <Route path="/dashboard" component={AuthGuard(Dashboard)}/>
         <Route path="/team" component={Team}/>
         <Route path="/sign_in" exact component={props => (<SignIn {...props} user={user}/>)}/>

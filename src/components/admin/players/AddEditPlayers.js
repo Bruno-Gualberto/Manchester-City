@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import AdminLayout from '../../../hoc/AdminLayout';
 import Fileuploader from '../../utils/fileUploader';
 
@@ -57,7 +58,10 @@ const AddEditPlayers = (props) => {
       }).catch(error => showErrorToast(error));
     } else {
       playersCollection.doc(props.match.params.playerid).update(dataToSubmit)
-      .then(() => showSuccessToast('Player updated!'))
+      .then(() => {
+        showSuccessToast('Player updated!');
+        props.history.push('/admin_players');
+      })
       .catch(error => showErrorToast(error))
       .finally(() => setLoading(false))
     }
@@ -183,7 +187,7 @@ const AddEditPlayers = (props) => {
               {formType === 'add' ? 
                 'Add player'
               :
-                'Edit player'
+                'Save changes'
               }
             </Button>
           </form>

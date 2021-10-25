@@ -37,7 +37,8 @@ const MatchesBlock = ({match}) => (
             </div>
             
             <div className="team_name">
-              {match.away}
+              {match.away
+              }
             </div>
           </div>
 

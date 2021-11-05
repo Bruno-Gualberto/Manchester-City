@@ -51,8 +51,6 @@ const TheMatches = () => {
     })
   }
 
-  console.log(state.filterMatches)
-
   return (
     <>
       { matches ? 
@@ -117,6 +115,7 @@ const TheMatches = () => {
                   </div>
                 </div>
               </div>
+              <MatchesList matches={state.filterMatches}/>
             </div>
 
             <div className="right">

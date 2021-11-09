@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useReducer } from 'react';
-import { showErrorToast, showSuccessToast } from '../utils/tools';
+import { showErrorToast } from '../utils/tools';
 
 import { CircularProgress } from '@material-ui/core';
 import { matchesCollection } from '../../firebase';
